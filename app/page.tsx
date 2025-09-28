@@ -1,7 +1,18 @@
 'use client';
 
-import { Progress } from "../components/ui/progress";
-import { Calendar, FileText, ClipboardList, DollarSign, Users, CheckCircle, Home } from "lucide-react";
+import { Calendar, FileText, Home } from "lucide-react";
+
+function ProgressInline({ value = 0, className = "" }: { value?: number; className?: string }) {
+  const clamped = Math.max(0, Math.min(100, value));
+  return (
+    <div className={`w-full bg-gray-200 rounded-full ${className}`}>
+      <div
+        className="h-full bg-gray-900 rounded-full"
+        style={{ width: `${clamped}%` }}
+      />
+    </div>
+  );
+}
 
 export default function Page() {
   return (
@@ -17,7 +28,7 @@ export default function Page() {
           <span className="text-xs text-gray-600">65%</span>
         </div>
         <div className="max-w-md mx-auto px-4 pb-3">
-          <Progress value={65} className="h-2" />
+          <ProgressInline value={65} className="h-2" />
         </div>
       </div>
 
