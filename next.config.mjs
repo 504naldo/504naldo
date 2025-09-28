@@ -6,7 +6,7 @@ const config = {
 
 export default withPWA({
   dest: 'public',
-  disable: process.env.NODE_ENV !== 'production',
+  disable: process.env.NODE_ENV !== 'production', // 
   register: true,
   skipWaiting: true,
 })(config);
