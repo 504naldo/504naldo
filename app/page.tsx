@@ -1,6 +1,6 @@
 'use client';
 
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "../components/ui/progress";
 import { Calendar, FileText, ClipboardList, DollarSign, Users, CheckCircle, Home } from "lucide-react";
 
 export default function Page() {
